@@ -1,0 +1,33 @@
+﻿@model EntityLayer.Concrete.Book
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <h2 class="mt-4">Kitap Ekleme Sayfası</h2>
+    <form asp-controller="Book" asp-action="AddBook" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="BookName">Kitap Adı</label>
+            <input asp-for="BookName" class="form-control" />
+            <span asp-validation-for="BookName" class="text-danger"></span>
+        </div>
+        </br>
+        <div class="form-group">
+            <label asp-for="BookWriter">Yazar</label>
+            <input asp-for="BookWriter" class="form-control" />
+            <span asp-validation-for="BookWriter" class="text-danger"></span>
+        </div>
+        </br>
+        <div class="form-group">
+            <label asp-for="BookImage">Kitap Görseli</label>
+            <input asp-for="BookImage" type="file" class="form-control" />
+            <span asp-validation-for="BookImage" class="text-danger"></span>
+        </div>
+        </br>
+        <button type="submit" class="btn btn-primary">Kitap Ekle</button>
+    </form>
+    <div class="row mt-4">
+        <div>
+            <a asp-controller="Book" asp-action="Index" class="btn btn-secondary">Kitap Listesine Dön</a>
+        </div>
+    </div>
+</div>

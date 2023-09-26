@@ -1,0 +1,36 @@
+﻿@model List<EntityLayer.Concrete.Book>
+<div>
+    <div class="row pt-3 pb-4">
+        <div>
+            <h1>Kitaplar</h1>
+        </div>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Kitap Adı</th>
+                <th>Yazar</th>
+                <th>Görsel</th>
+                <th>Durumu</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Model)
+            {
+                <tr>
+                    <td>@book.BookName</td>
+                    <td>@book.BookWriter</td>
+                    <td>@book.BookImage</td>
+                    <td>@book.BookStatus</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="row pt-3 pb-2">
+        <div>
+            <a asp-controller="Book" asp-action="AddBook" class="btn btn-lg btn-primary" type="button">
+                Yeni Kitap Oluştur
+            </a>
+        </div>
+    </div>
+</div>
