@@ -14,7 +14,7 @@ namespace Library.Controllers
             var values = bookManager.TGetList();
 
             return View(values);
-        }
+        } 
 
         [HttpGet]
         public PartialViewResult AddBook()
