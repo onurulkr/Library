@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Library.Controllers
 {
-    public class BookController : Controller
+    public class BookController : Controller 
     {
         BookManager bookManager = new BookManager(new EfBookDal());
 
