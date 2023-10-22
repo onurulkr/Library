@@ -10,7 +10,7 @@ namespace Library.Controllers
         BookManager bookManager = new BookManager(new EfBookDal());
 
         public IActionResult Index()
-        {
+        { 
             var values = bookManager.TGetList();
 
             return View(values);
